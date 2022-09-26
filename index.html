@@ -13,10 +13,12 @@
 </body>
 
     <script>
+    	var loc = window.location.toString(),
+    	    params = loc.split('/#')[1];
+    	    
             let myIframe = document.getElementById("myIframe");
             let URL = "https://app.appsmith.com/app/easywaste/login-632c6d46681eba5270fc264b?embed=true";
-                let finalURL = URL+"";
-            console.log(finalURL);
+                let finalURL = URL + "/#" + params;
             myIframe.src = finalURL;
      </script>
 
